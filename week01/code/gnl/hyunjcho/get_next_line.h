@@ -4,12 +4,6 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-typedef struct s_line
-{
-	char	*str;
-	size_t	len;
-}	t_line;
-
 char	*get_next_line(int fd);
 int		ft_strchr(char *s);
 char	*ft_strjoin(char *s1, char *s2);
