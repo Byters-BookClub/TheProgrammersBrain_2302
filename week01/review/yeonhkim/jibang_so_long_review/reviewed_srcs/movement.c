@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   movement.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jibang <jibang@student.42seoul.kr>         +#+  +:+       +#+        */
+/*   By: yeonhkim <yeonhkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 18:01:31 by jibang            #+#    #+#             */
-/*   Updated: 2022/07/03 13:18:17 by jibang           ###   ########.fr       */
+/*   Updated: 2023/02/08 13:26:51 by yeonhkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ void	move_up(t_params *var)
 
 	pos = find_player_pos(*var);
 	if (var->map_line[pos.i - var->map_width] == WALL)
+					// pos 구조체의 i 멤버가 어떤 값을 가지는 것인지 이름으로 추측하기 쉽지 않다만 아마 x좌표의 값인 듯 하다.
 		return ;
 	else if (var->map_line[pos.i - var->map_width] == SPACE)
 	{
