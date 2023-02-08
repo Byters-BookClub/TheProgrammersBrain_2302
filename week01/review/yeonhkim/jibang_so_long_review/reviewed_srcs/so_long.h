@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jibang <jibang@student.42seoul.kr>         +#+  +:+       +#+        */
+/*   By: yeonhkim <yeonhkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/01 14:36:59 by jibang            #+#    #+#             */
-/*   Updated: 2022/07/05 17:03:18 by jibang           ###   ########.fr       */
+/*   Updated: 2023/02/08 13:13:21 by yeonhkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,5 +111,6 @@ int			check_map_cep(char *line);
 /* IMAGES */
 void		ft_put_images(t_params var);
 void		put_info(t_params var);
+
 
 #endif
