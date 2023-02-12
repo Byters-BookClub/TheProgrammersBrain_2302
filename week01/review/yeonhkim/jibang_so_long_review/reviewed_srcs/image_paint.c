@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   image_paint.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yeonhkim <yeonhkim@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hyeyukim <hyeyukim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 18:17:35 by jibang            #+#    #+#             */
-/*   Updated: 2023/02/08 13:41:52 by yeonhkim         ###   ########.fr       */
+/*   Updated: 2023/02/06 21:45:33 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,11 @@ void	put_info(t_params var)
 	t_string	str;
 	// 이 함수 내부에서만 사용하는, 서로 관련이 있다고는 보기 힘든 변수들이라
 	// 굳이 구조체로 묶어둘 필요는 없었을 것 같은데, 혹시 25줄 이내로 맞추시려고 그런걸까?
-	
+	// char	*strs[3];
+	// strs[STR_STEP];
 	int			x;
 	int			y;
-	int			x1;	// x1이 뭐지? 아는 전자기기 모델명이 x1이긴한데 그건 아닐테고.
+	int			x1;	// x1이 뭐지? 아는 전자기기 모델명이 x1이긴한데 그건 아닐테고....
 
 	str.col = ft_itoa(var.collect_now);
 	str.mis = ft_itoa(var.collect_goal);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jibang <jibang@student.42seoul.kr>         +#+  +:+       +#+        */
+/*   By: hyeyukim <hyeyukim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 14:52:58 by jibang            #+#    #+#             */
-/*   Updated: 2022/04/08 20:02:55 by jibang           ###   ########.fr       */
+/*   Updated: 2023/02/06 20:47:50 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	is_newline(char *save)
 	int		i;
 
 	if (save == NULL)
-		return (0);
+		return (0);*
 	i = 0;
 	while (save[i])
 	{

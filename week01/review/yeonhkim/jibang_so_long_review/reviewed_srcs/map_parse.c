@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   map_parse.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yeonhkim <yeonhkim@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hyeyukim <hyeyukim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/02 18:01:52 by jibang            #+#    #+#             */
-/*   Updated: 2023/02/08 13:42:59 by yeonhkim         ###   ########.fr       */
+/*   Updated: 2023/02/06 21:28:11 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-// 함수명과는 달리 인자로 map의 first line을 받고 있다. 이 함수에서 first line을 반반환해주고 있지 않다.
+// 함수명과는 달리 인자로 map의 first line을 받고 있다. 이 함수에서 first line을 반환해주고 있지 않다.
 // init_map_info 등 맵의 기초 정보를 구하는 것이라는 의미를 담은 이름으로 변경하는 것이 좋을 것 같다. 
 void	get_first_line(t_params *var, char *line)
 {

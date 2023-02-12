@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yeonhkim <yeonhkim@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hyeyukim <hyeyukim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/01 14:36:59 by jibang            #+#    #+#             */
-/*   Updated: 2023/02/08 13:13:21 by yeonhkim         ###   ########.fr       */
+/*   Updated: 2023/02/06 21:44:57 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,12 @@
 # define D_KEY 2
 # define ESC_KEY 53
 # define RED_X 17
+
+enum e_str_types {
+	STR_STEP,
+	STR_COLUMN,
+	STR_MIS
+}
 
 typedef struct s_string
 {
