@@ -11,6 +11,7 @@ int	exec_word(t_tree_node *root)
 	p_status = EXIT_SUCCESS;
 	if (root->type == TN_PARENS)
 		return (exec_parens(root));
+	// exit하는 상황이 아닌데 exit_success를 왜 쓴건지 모르겠음..!
 	else if (root->command && (check_builtin(root->command) == EXIT_SUCCESS))
 		return (run_builtin(root));
 	else
@@ -44,6 +45,7 @@ int	exec_last_word_child(t_tree_node *root, t_pipe p)
 	return (p.status);
 }
 
+// 리다이렉션을 수행하고 명령어를 실행하는구나..
 int	exec_word_child(t_tree_node *root)
 {
 	char	*path;

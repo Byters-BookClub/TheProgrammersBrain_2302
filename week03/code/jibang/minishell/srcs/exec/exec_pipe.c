@@ -5,6 +5,8 @@ static void	exec_pipe_child(t_tree_node *root, t_pipe p);
 static int	exec_last_pipe(t_tree_node *root, t_pipe p);
 static void	exit_wait(int cnt);
 
+// 구조체 이름을 pipe로 하는 건 다소 어색한 것 같다..
+// 내부에 pid를 포함한 정보가 있는데 오직 pipe에 대한 정보만 있지는 않다
 int	exec_pipe(t_tree_node *root)
 {
 	t_pipe	p;
