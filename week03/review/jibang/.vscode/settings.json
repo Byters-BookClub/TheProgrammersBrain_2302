@@ -1,0 +1,6 @@
+{
+	"files.associations": {
+		"parser_internal.h": "c",
+		"s_token.h": "c"
+	}
+}
