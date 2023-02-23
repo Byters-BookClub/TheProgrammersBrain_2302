@@ -1,0 +1,7 @@
+{
+	"files.associations": {
+		"redirect.h": "c",
+		"minishell.h": "c",
+		"parse.h": "c"
+	}
+}
