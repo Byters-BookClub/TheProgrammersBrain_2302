@@ -6,7 +6,7 @@
 /*   By: jibang <jibang@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 16:15:38 by yeonhkim          #+#    #+#             */
-/*   Updated: 2023/02/24 00:46:09 by jibang           ###   ########.fr       */
+/*   Updated: 2023/02/24 13:27:08 by jibang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ int	execute_single_builtin(t_execute_unit *exe_unit)
 	int	ori_fd[2];
 
 	do_expansion(exe_unit);
-	backup_standard_stream(ori_fd); //리다이렉션용
+	backup_standard_stream(ori_fd); //리다이렉션용 백업
 	if (do_redirecting(exe_unit->redir_list) == FAILURE)
 		return (FAILURE);
 	execute_builtin(exe_unit);

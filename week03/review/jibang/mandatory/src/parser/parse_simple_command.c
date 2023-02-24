@@ -6,7 +6,7 @@
 /*   By: jibang <jibang@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 15:56:36 by yeonhkim          #+#    #+#             */
-/*   Updated: 2023/02/24 00:45:51 by jibang           ###   ########.fr       */
+/*   Updated: 2023/02/24 13:27:06 by jibang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ int	parse_simple_command(t_node *node, t_token *tokens, int *offset)
 	const int		initial_offset = *offset;
 
 	node->type = NODE_SIMPLE_CMD;
-	node->exe_unit = create_execute_unit(node->type);
+	node->exe_unit = create_execute_unit(node->type); //실행 큐까지 만들어 버림
 	if (parse_prefix(node->exe_unit->q_redir_list, tokens, offset) == FAILURE)
 		return (FAILURE);
 	parse_command_name(node->exe_unit, tokens, offset);

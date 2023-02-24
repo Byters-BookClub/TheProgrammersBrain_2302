@@ -6,7 +6,7 @@
 /*   By: jibang <jibang@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 15:54:11 by yeonhkim          #+#    #+#             */
-/*   Updated: 2023/02/24 10:34:03 by jibang           ###   ########.fr       */
+/*   Updated: 2023/02/24 13:27:04 by jibang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ static int	parse_command(t_node *node, t_token *tokens, int *offset) // 이름�
 	int	res;
 
 	if (tokens[*offset].type == TOKEN_LPAREN)
-		res = parse_subshell(node, tokens, offset);
+		res = parse_subshell(node, tokens, offset); //괄호로 감싸진 경우와
 	else
-		res = parse_simple_command(node, tokens, offset);
+		res = parse_simple_command(node, tokens, offset); // 그냥 커맨드인 경우
 	return (res);
 }
 
