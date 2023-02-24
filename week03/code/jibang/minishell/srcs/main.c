@@ -17,7 +17,7 @@ int	main(int ac, char **av, char **envp)
 	welcome_screen();
 	// display, nodisplay는 각각 제어문자 출력여부에 대한 설정 같다.
 	// set_echoctl_on, set_echoctl_off 같은 변수명을 사용했으면,
-	// 조금 더 구체적으로 드러났을 것 같다.
+	// 조금 더 구체적으로 의미가 전달됐을 것 같다.
 	if (tcgetattr(STDIN_FILENO, &g_var.display_set) == ERROR)
 		error_exit("minsh: tcgetattr");
 	if (tcgetattr(STDIN_FILENO, &g_var.nodisplay_set) == ERROR)
@@ -35,7 +35,7 @@ static void	shell_loop(void)
 	while (1)
 	{
 		// 현재는 매 루프마다 dup2를 호출하는데, 만약 fork를 통해 수행되는 명령어라면,
-		// dup2를 매번 호출할 필요는 없을 것 같음.
+		// dup2를 매번 호출할 필요는 없을 것 같다.
 		dup2(g_var.old_std_fdin, STDIN_FILENO);
 		dup2(g_var.old_std_fdout, STDOUT_FILENO);
 		cmd_line = set_read_line(&info);

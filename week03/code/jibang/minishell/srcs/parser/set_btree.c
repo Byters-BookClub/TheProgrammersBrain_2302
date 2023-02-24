@@ -8,6 +8,7 @@ void	set_btree_node(t_tree_node **node)
 {
 	t_token	*root;
 
+	// 노드타입을 명시해주는게 조금 더 좋았을 것 같다
 	if (*node && !((*node)->type))
 	{
 		root = check_root_node((*node)->tokens);

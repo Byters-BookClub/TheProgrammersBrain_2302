@@ -9,9 +9,12 @@ int	exec_word(t_tree_node *root)
 	signal(SIGINT, &sig_exec);
 	signal(SIGQUIT, &sig_exec);
 	p_status = EXIT_SUCCESS;
+	// exec_word를 호출하는 함수의 type이 word인데 이 함수 내부에서 서브쉘인지 다시 한번 확인한다.
+	// 아마 서브쉘 로직에서 이 함수를 호출하기 때문인 것 같은데.. 만약 로직이 수정가능하다면 
+	// 두 함수를 완전히 분리하는 것이 좋을 것 같다
 	if (root->type == TN_PARENS)
 		return (exec_parens(root));
-	// exit하는 상황이 아닌데 exit_success를 왜 쓴건지 모르겠음..!
+	// exit하는 상황이 아닌데 exit_success를 사용한 점이 다소 아쉽다.
 	else if (root->command && (check_builtin(root->command) == EXIT_SUCCESS))
 		return (run_builtin(root));
 	else
@@ -21,6 +24,7 @@ int	exec_word(t_tree_node *root)
 			exit(EXIT_FAILURE);
 		else if (pid == 0)
 		{
+			// exec_word_child에서 exit을 호출하지 않고, 해당 함수 윗단계에서 exit분기를 건 명시하는 건 좋은 것 같다
 			status = exec_word_child(root);
 			exit(status);
 		}
